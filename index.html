@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>website</title>
+    <link rel="shortcut icon" href="logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Sassy+Frass&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: "Poppins", sans-serif;
+        box-sizing: border-box;
+      }
+
+      .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 80px;
+        box-shadow: 2px 2px 5px gray;
+      }
+
+      .header .menu {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        height: 100%;
+        line-height: 80px;
+      }
+
+      .header .menu .nav-list {
+        list-style-type: none;
+        margin: 0px 10px;
+      }
+
+      .header .menu .nav-list img {
+        width: 100%;
+        width: 90px;
+        position: absolute;
+        top: 15px;
+        left: 50px;
+      }
+      .header .menu .nav-list a {
+        text-decoration: none;
+        color: black;
+        text-transform: capitalize;
+        padding: 5px 20px;
+        border: 1px solid black;
+        transition: background-color 0.5s ease, color 0.5s ease;
+      }
+      .header .menu #logo a {
+        border: none;
+      }
+
+      #active a,
+      .header .menu .nav-list a:hover {
+        background-color: black;
+        color: white;
+      }
+
+      .header .menu #logo a:hover {
+        background: transparent;
+      }
+
+      .section {
+        margin-top: 100px;
+        display: flex;
+      }
+
+      .title {
+        width: 50%;
+        height: 500px;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-content: center;
+        text-align: center;
+        text-transform: capitalize;
+        animation-name: bhaskar;
+        animation-duration: 3s;
+        animation-timing-function: ease-out;
+      }
+
+      #title {
+        font-size: 60px;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+
+      .title .sub-title-tag {
+        align-self: center;
+        font-size: 20px;
+        font-weight: normal;
+        text-shadow: 0px 3px 5px gray;
+        background-color: #087ae5;
+        padding: 1px 5px;
+      }
+
+      @keyframes bhaskar {
+        from {
+          opacity: 0;
+        }
+
+        to {
+          opacity: 1;
+        }
+      }
+      .image {
+        position: relative;
+        top: 110px;
+        right: 80px;
+        width: 50%;
+        height: 500px;
+        object-fit: contain;
+        animation-name: car-image;
+        animation-duration: 2.5s;
+        animation-timing-function: ease-out;
+      }
+
+      @keyframes car-image {
+        from {
+          left: 1000px;
+        }
+        to {
+          left: -80px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <ul class="menu">
+        <li class="nav-list" id="logo">
+          <a href="#"
+            ><img
+              src="data:image/png;base64,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"
+       alt="logo"
+          /></a>
+        </li>
+        <li class="nav-list" id="active"><a href="#">home</a></li>
+        <li class="nav-list"><a href="#">products</a></li>
+        <li class="nav-list"><a href="#">service</a></li>
+        <li class="nav-list"><a href="#">contact us</a></li>
+      </ul>
+    </header>
+    <div class="section">
+      <div class="title" id="title">
+        tesla
+        <div class="sub-title-tag">the future of EV cars</div>
+      </div>
+      <div class="image"><img src="car.png" alt="" /></div>
+      <hr />
+    </div>
+  </body>
+</html>
